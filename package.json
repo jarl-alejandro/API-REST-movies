@@ -1,0 +1,17 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "Api Rest que sirve infor sobre peliculas",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node server.js"
+  },
+  "author": "Alejandro Rivas <jarlalejor@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.7"
+  }
+}
