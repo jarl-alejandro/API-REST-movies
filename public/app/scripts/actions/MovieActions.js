@@ -2,6 +2,7 @@
 
 import AppDispatcher from '../dispatchers/AppDispatchers'
 import MovieConstants from '../constants/MovieConstants'
+import RouterContainer from '../service/RouterContainer'
 import $ from 'jquery'
 
 const MovieActions = {
@@ -20,8 +21,14 @@ const MovieActions = {
   },
 
   create: function(title, summary, picture){
-    $.post("/api/movies", {title:title, summary:summary, picture:picture}, (data)=>{
-      console.log("data => ",data)
+    let movie = {
+      title:title,
+      summary:summary,
+      picture:picture
+    }
+    $.post("/api/movies", movie, (data)=>{
+        let nextPath = RouterContainer.get().getCurrentQuery().nextPath || '/'
+        RouterContainer.get().transitionTo("/")
     })
   }
 
