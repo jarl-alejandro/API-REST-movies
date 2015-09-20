@@ -2,6 +2,7 @@
 
 import AppDispatcher from '../dispatchers/AppDispatchers'
 import MovieConstants from '../constants/MovieConstants'
+import $ from 'jquery'
 
 const MovieActions = {
 
@@ -16,6 +17,12 @@ const MovieActions = {
           movies: movies
         })
       })
+  },
+
+  create: function(title, summary, picture){
+    $.post("/api/movies", {title:title, summary:summary, picture:picture}, (data)=>{
+      console.log("data => ",data)
+    })
   }
 
 }

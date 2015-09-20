@@ -1,6 +1,7 @@
 'use strict'
 
 import React from 'react'
+import { Route, RouteHandler, Link } from 'react-router'
 import MovieStore from '../../stores/MovieStore'
 import MovieActions from '../../actions/MovieActions'
 import Movie from './Movie'
@@ -25,6 +26,7 @@ class Movies extends React.Component{
     return(
       <div>
         <h1>Welcome to Movie App</h1>
+        <Link to="new">Nueva Peli</Link>
         <button onClick={ this._onClick.bind(this) }>movie app</button>
         <ul>
           {
