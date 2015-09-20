@@ -12,6 +12,7 @@
     "body-parser": "^1.14.0",
     "cors": "^2.7.1",
     "express": "^4.13.3",
+    "flux": "^2.1.1",
     "mongoose": "^4.1.7",
     "react": "^0.13.3",
     "react-router": "^0.13.3"
