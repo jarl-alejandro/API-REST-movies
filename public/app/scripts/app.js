@@ -5,11 +5,11 @@ import Router, { Route } from 'react-router'
 import RouterContainer from './service/RouterContainer'
 
 import About from './components/about/About'
-import Movie from './components/movie/Movie'
+import Movies from './components/movie/Movies'
 
 const routes = (
   <Route>
-    <Route name="home" path="/" handler={ Movie } />
+    <Route name="home" path="/" handler={ Movies } />
     <Route name="about" path="/about" handler={ About } />
   </Route>
 )
