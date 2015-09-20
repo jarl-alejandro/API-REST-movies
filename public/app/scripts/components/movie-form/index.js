@@ -35,7 +35,6 @@ class CreateMovie extends React.Component{
     let summary = this.refs.summary.getDOMNode().value
     let picture = this.refs.picture.getDOMNode().value
 
-    console.log(title + " + " + summary + " + " + picture)
 
     MovieActions.create(title, summary, picture)
 
