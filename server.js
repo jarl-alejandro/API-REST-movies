@@ -14,7 +14,8 @@ server.on("listening", onListening)
 
 mongoose.connect(database, onDBConnect)
 
-server.listen(port)
+if(!module.parent)
+  server.listen(port)
 
 function onDBConnect(err){
   if(err) console.log(`ERROR: on connection to database, ${ err }`)
