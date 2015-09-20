@@ -1,7 +1,7 @@
 'use strict'
 
 import { EventEmitter } from 'events'
-import Dispatcher from '../dispatchers/AppDispatchers'
+import AppDispatcher from '../dispatchers/AppDispatchers'
 
 class BaseStore extends EventEmitter{
 
@@ -26,7 +26,7 @@ class BaseStore extends EventEmitter{
   }
 
   removeChangeListener(cb){
-    this.on("CHANGE", cb)
+    this.removeListener('CHANGE', cb)
   }
 }
 
